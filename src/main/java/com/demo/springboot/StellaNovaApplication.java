@@ -2,11 +2,13 @@ package com.demo.springboot;
 
 import org.springframework.boot.*;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 import org.springframework.context.annotation.*;
 import org.springframework.security.crypto.bcrypt.*;
 import org.springframework.security.crypto.password.*;
 
 @SpringBootApplication
+@EnableDiscoveryClient
 public class StellaNovaApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(StellaNovaApplication.class, args);
@@ -25,9 +27,5 @@ public class StellaNovaApplication {
 //		};
 //	}
 
-	@Bean
-	PasswordEncoder passwordEncoder()
-	{
-		return new BCryptPasswordEncoder();
-	}
+
 }

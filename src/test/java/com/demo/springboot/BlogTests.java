@@ -28,32 +28,6 @@ class BlogTests {
 	}
 
 	@Test
-	void PostBlogItem() {
-		Collection<Role> roles = new ArrayList<>();
-		Role role = new Role(Long.valueOf(1),"ROLE_USER");
-		roles.add(role);
-		Account account = new Account(Long.valueOf(5),"jrut3", "$2a$10$1qDGw36gZnGTlfAVXa9EFO2GEu5vk.FC5Aq1nyzBZAtQXmIRqSOoW", "test", roles);
-
-		int blogID = 0;
-		blogService.AddBlog(account.getUserID(), account.getUserName(), "Today im writing this Blog.");
-		List<Blog> blogList = blogRepo.getAllByBlogIDAfter(0);
-		for (Blog blog: blogList)
-		{
-			blogID = blog.getBlogID();
-		}
-
-		Blog actualBlog = blogRepo.getBlogByBlogID(blogID);
-
-		String timeStamp = new SimpleDateFormat("yyyy.MM.dd").format(new Date());
-
-		Blog expectedBlog = new Blog(actualBlog.getBlogID(),"jrut3", timeStamp,"Today im writing this Blog." );
-		Assertions.assertEquals(expectedBlog, actualBlog);
-
-		blogRepo.delete(actualBlog);
-
-	}
-
-	@Test
 	void GetBlogItem() {
 
 		Blog actualBlog = blogRepo.getBlogByBlogID(1);

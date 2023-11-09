@@ -7,7 +7,7 @@ plugins {
 }
 
 group = 'com.demo'
-version = '0.0.1-SNAPSHOT'
+version = '1'
 sourceCompatibility = '11'
 
 configurations {
@@ -24,12 +24,13 @@ test {
 	useJUnitPlatform()
 }
 dependencies {
+	implementation 'org.springframework.cloud:spring-cloud-starter-netflix-eureka-client'
 	implementation ('org.springframework.boot:spring-boot-starter')
 	implementation ('org.springframework.boot:spring-boot-starter-web')
 	implementation ('org.springframework.boot:spring-boot-starter-websocket')
 	implementation 'org.springframework.boot:spring-boot-starter-data-jpa:2.5.5'
-    implementation 'org.springframework.boot:spring-boot-starter-security'
-    compileOnly 'org.projectlombok:lombok'
+	implementation 'org.springframework.boot:spring-boot-starter-security'
+	compileOnly 'org.projectlombok:lombok'
 	developmentOnly 'org.springframework.boot:spring-boot-devtools'
 	annotationProcessor 'org.projectlombok:lombok'
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
@@ -38,6 +39,16 @@ dependencies {
 	implementation 'org.json:json:20171018'
 	implementation 'junit:junit:4.12'
 
+}
+
+ext {
+	set('springCloudVersion', "2020.0.6")
+}
+
+dependencyManagement {
+	imports {
+		mavenBom "org.springframework.cloud:spring-cloud-dependencies:${springCloudVersion}"
+	}
 }
 
 sonarqube {
