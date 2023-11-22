@@ -38,7 +38,6 @@ dependencies {
 	implementation 'com.auth0:java-jwt:3.18.2'
 	implementation 'org.json:json:20171018'
 	implementation 'junit:junit:4.12'
-
 }
 
 ext {
