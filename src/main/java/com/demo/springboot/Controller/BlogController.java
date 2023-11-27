@@ -14,7 +14,7 @@ import java.util.*;
 @RequestMapping("/reading")
 public class BlogController {
 
-        public List<Blog> bookList = new ArrayList<>();
+        public List<Blog> blogList = new ArrayList<>();
 
         @Autowired
          IBlogRepo si;
@@ -22,11 +22,13 @@ public class BlogController {
     @GetMapping("/get")
     public ResponseEntity<List<Blog>> GetBlogItem()
     {
-        bookList = si.getAllByBlogIDAfter(0);
 
-        if (bookList != null)
+        blogList = si.getAllByBlogIDAfter(0);
+
+        if (blogList != null)
         {
-            return ResponseEntity.ok(bookList);
+
+            return ResponseEntity.ok(blogList);
         }
         return ResponseEntity.notFound().build();
     }
