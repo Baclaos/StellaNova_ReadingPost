@@ -51,9 +51,9 @@ jobs:
         # GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}  # Needed to get PR information, if any
         SONAR_HOST_URL: ${{ secrets.SONAR_HOST_URL }}
         SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
-        SONAR_PROJECT_KEY: ${{ secrets.SONAR_PROJECT_KEY }}
-        SONAR_PROJECT_NAME: ${{ secrets.SONAR_PROJECT_NAME }}
-        SONAR_LOGIN: ${{ secrets.SONAR_LOGIN }}
-        SONAR_PASSWORD: ${{ secrets.SONAR_PASSWORD }}
+        # SONAR_PROJECT_KEY: ${{ secrets.SONAR_PROJECT_KEY }}
+        # SONAR_PROJECT_NAME: ${{ secrets.SONAR_PROJECT_NAME }}
+        # SONAR_LOGIN: ${{ secrets.SONAR_LOGIN }}
+        # SONAR_PASSWORD: ${{ secrets.SONAR_PASSWORD }}
       run: ./gradlew build sonar --scan
 
