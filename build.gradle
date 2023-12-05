@@ -26,19 +26,19 @@ test {
 dependencies {
 	implementation 'org.springframework.cloud:spring-cloud-starter-netflix-eureka-client'
 	implementation ('org.springframework.boot:spring-boot-starter')
-	implementation ('org.springframework.boot:spring-boot-starter-web')
+//	implementation ('org.springframework.boot:spring-boot-starter-web')
 	implementation ('org.springframework.boot:spring-boot-starter-websocket')
+
 	implementation 'org.springframework.boot:spring-boot-starter-data-jpa:2.5.5'
-	implementation 'org.springframework.boot:spring-boot-starter-security'
+
 	compileOnly 'org.projectlombok:lombok'
 	implementation 'org.apache.kafka:kafka-clients:2.3.1'
 	developmentOnly 'org.springframework.boot:spring-boot-devtools'
 	annotationProcessor 'org.projectlombok:lombok'
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
 	implementation 'mysql:mysql-connector-java:8.0.27'
-	implementation 'com.auth0:java-jwt:3.18.2'
-	implementation 'org.json:json:20171018'
 	implementation 'junit:junit:4.12'
+
 }
 
 ext {
@@ -53,7 +53,8 @@ dependencyManagement {
 
 sonarqube {
 	properties {
-		property "sonar.projectKey", "I439919_stellanova_AX3ZAIgIjBbSKanPI_vy"
+		property "sonar.projectKey", "stellanova_reading_service"
+		property "sonar.projectName", "stellanova_reading_service"
 		property "sonar.qualitygate.wait", false
 	}
 }
