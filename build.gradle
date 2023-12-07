@@ -54,6 +54,9 @@ dependencyManagement {
 sonar {
 	properties {
 		property "sonar.projectKey", "stellanova_reading_service"
+		property "sonar.token", "sqp_52fff436d5b118086b2f313da922ac740e6a0373"
+		property "sonar.login", "admin"
+		property "sonar.password", "stellanova"
 	}
 }
 
