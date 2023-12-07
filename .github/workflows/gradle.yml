@@ -1,4 +1,4 @@
-name: Java CI/CD & SonarQube
+name: Build Java & Deploy on Docker Hub
 
 on:
   push:
