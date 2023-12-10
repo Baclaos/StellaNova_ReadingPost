@@ -53,7 +53,7 @@ dependencyManagement {
 
 sonar {
 	properties {
-		property "sonar.projectKey", "stellanova_reading_service
+		property "sonar.projectKey", "stellanova_reading_service"
 	}
 }
 
