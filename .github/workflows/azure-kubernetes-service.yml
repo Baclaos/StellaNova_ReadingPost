@@ -35,11 +35,11 @@ on:
   workflow_dispatch:
 
 env:
-  AZURE_CONTAINER_REGISTRY: "your-azure-container-registry"
-  CONTAINER_NAME: "your-container-name"
-  RESOURCE_GROUP: "your-resource-group"
-  CLUSTER_NAME: "your-cluster-name"
-  DEPLOYMENT_MANIFEST_PATH: "your-deployment-manifest-path"
+  AZURE_CONTAINER_REGISTRY: acrworkflow1702290219396
+  CONTAINER_NAME: 412344443/stellanova_reading
+  RESOURCE_GROUP: stellanova_resources_cluster
+  CLUSTER_NAME: stellanova
+  DEPLOYMENT_MANIFEST_PATH: reading-service-deployment.yaml
 
 jobs:
   buildImage:
