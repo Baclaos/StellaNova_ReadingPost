@@ -50,6 +50,9 @@ jobs:
     steps:
       # Checks out the repository this file is in
       - uses: actions/checkout@v3
+      
+      - name: Change wrapper permissions
+        run: chmod +x ./gradlew
 
       # Logs in with your Azure credentials
       - name: Azure login
