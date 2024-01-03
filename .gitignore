@@ -1,6 +1,10 @@
 .gradle
-build/
-!build/.libs
+build/classes
+build/generated
+build/resources
+build/sonar
+build/temp
+build/bootJarMainClassName
 !gradle/wrapper/gradle-wrapper.jar
 !**/src/main/**/build/
 !**/src/test/**/build/
